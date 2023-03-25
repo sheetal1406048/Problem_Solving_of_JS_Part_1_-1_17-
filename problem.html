@@ -1,0 +1,194 @@
+<script>
+
+    // #6 : Product of 1st 10 digit
+    var product = 1;
+    for( var i = 1; i <=10 ; i++){
+        product = product *i;
+    }
+    console.log("(6)Product of first 10 digits = " + product);
+
+
+    //#7 : sum 0f odd number (10 < odd number < 30)
+
+    var sum = 0;
+    for(i = 11; i < 31 ; i++){
+        if(i%2 != 0){
+            sum = sum + i;
+        }
+        else{
+            continue;
+        }
+    }
+
+    console.log("(7)Sum of odd Number (10 < Odd Number <30) : " + sum)
+
+
+    //#8 : from C to F scale
+    function cToFscale(value){
+        console.log( "(8) Celcius to Fahrenheit Scale : "+ ((9*value)/5 + 32))
+    }
+    cToFscale(25)
+
+
+    //#11 : calculate the average of the numbers in a array
+
+    var array = [1,3,5,7,9,33,-4]
+    //console.log(array.length)
+    var n = array.length;
+    var sum = 0;
+    for(i = 0 ; i < array.length ; i++){
+        sum = sum + array[i];
+    }
+
+    console.log("(11) Average : " + (sum/n))
+
+
+    //#12 given array = [1,-1,2,-2,3]
+    //output = [1,2,3]
+
+    function positiveArray(num){
+        var arrayNew = [];
+        for(i = 0; i < array.length ; i++){
+            //console.log(array.length)
+            if(array[i] >= 0){
+                //console.log(array[i])
+                arrayNew.push(array[i])
+                //console.log(arrayNew)
+            }
+        }
+        //console.log(arrayNew)
+        return arrayNew;
+    }
+    var array = [-1,-2,-3,0,1,2,3,-4,5]
+    var result = positiveArray(array)
+    console.log("(12) New Array with Positive Numbers = " + result)
+     
+
+    //#13 ; Find the maximum number of an array
+
+    var array = [11,-2,1,2,65,4,-4,7,7]
+    var tem = array[0];
+    for(i = 0 ; i < array.length ; i++){
+        if(array[i] > tem){
+            tem = array[i]
+        }
+    }
+    console.log("(13) Maximum value of the array : " + tem)
+
+    //#14 : Print first three Fibonacci Number
+    var array = [0,1];
+    var n = 10; // First 10 digits
+    var sum = 0;
+    var tem = 0;
+    for(i = 1 ; i <= n-2 ; i++){
+        sum = array[i-1] + array[i];
+       // console.log(sum)
+        array.push(sum)
+        //console.log(array)
+    }  
+    console.log("(14)First ten Fibonacci Numbers = " + array)
+
+//#15 : Find 10th Fibonnaci Number with Recursion
+
+function Fibonacci(num){
+    //console.log(number)
+
+    if(num==0){
+        return 0;
+    }
+    if(num==1){
+        return 1;
+    }
+    else{
+        return (Fibonacci(num-1)+Fibonacci(num-2));
+
+    }
+    
+}
+var n = 10;
+for(var i = 0 ; i < n ; i++){
+    //console.log((Fibonacci(i)))
+    (Fibonacci(i))
+    if(i == n-1){
+        console.log("(15)" + n + "th Fibonacci Number : " + Fibonacci(i))
+    }
+}
+
+
+//#16 : Prime Number Checker
+
+function primeChecker(num){
+    if(num==2 || num==1){
+        return true;
+    }
+    if(num%2==0 || num%3==0 || num%5==0 || num%7==0){
+        return false;
+    }
+
+    else{
+        return true;
+    }
+}
+
+var result = primeChecker(47)
+console.log("(16) is Prime? => " + result)
+
+//#17 ; calculate the sum of digits of a positive integer number 
+
+var number = 124578;
+
+var intToString = number.toString()
+//console.log(typeof intToString)
+ var tempArray = [];
+ var tempArray1 = [];
+ var tem = 0;
+ var sum = 0;
+
+for( i = 0 ; i < intToString.length ; i++){
+    tempArray.push(intToString[i]);
+   // console.log(tempArray)
+}
+//console.log(tempArray)
+for(var j = 0 ; j < tempArray.length ; j++){
+    tem = tempArray[j];
+    //console.log(typeof tem)
+    tem = parseInt(tem);
+    //console.log(typeof tem)
+    tempArray1.push(tem);
+    //console.log(tempArray1)
+
+}
+    console.log(tempArray1)
+    
+    for(var k = 0 ; k < tempArray1.length ; k++){
+        sum = sum + tempArray1[k];
+}
+console.log("Sum of the digits of " + number + " = " + sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 
